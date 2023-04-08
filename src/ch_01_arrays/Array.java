@@ -1,5 +1,7 @@
 package ch_01_arrays;
 
+import java.util.ArrayList;
+
 public class Array {
 
     /*
@@ -91,6 +93,20 @@ public class Array {
             start++;
             end--;
         }
+    }
+
+    /*
+     * Check duplicates
+     */
+    public static boolean checkDuplicate(ArrayList<Integer> arr, int elementToSearch) {
+        boolean isElementPresent = false;
+        for (int j = 0; j < arr.size(); j++) {
+            if (elementToSearch == arr.get(j)) {
+                isElementPresent = true;
+                break;
+            }
+        }
+        return isElementPresent;
     }
 
     /*
